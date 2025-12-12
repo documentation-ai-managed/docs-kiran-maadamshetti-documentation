@@ -1,0 +1,144 @@
+---
+title: Customizing Your Documentation Space
+description: Personalize your documentation environment to match your branding and workflow preferences.
+---
+
+## Overview
+
+Tailor your Kiran Maadamshetti Documentation space to reflect your brand and optimize your workflow. Adjust themes, layouts, and colors like the brand blue `#3B82F6`. Export settings for backups or share configurations across teams.
+
+<Columns cols={3}>
+  <Card title="Theme Colors" icon="palette" href="#theme-customization">
+    Set primary, secondary, and accent colors.
+  </Card>
+  <Card title="Layout Options" icon="layout" href="#layout-adjustments">
+    Choose grid, sidebar, or full-width layouts.
+  </Card>
+  <Card title="Export/Import" icon="download" href="#export-import">
+    Backup and restore your custom settings.
+  </Card>
+</Columns>
+
+## Theme Customization
+
+Customize your documentation's appearance starting with colors. Use the brand color `#3B82F6` for buttons and links.
+
+<Steps>
+  <Step title="Access Settings" icon="settings">
+    Navigate to the dashboard and select `Customization` from the sidebar.
+  </Step>
+  <Step title="Update Colors" icon="palette">
+    Enter your hex codes in the theme editor.
+  </Step>
+  <Step title="Preview Changes" icon="eye">
+    Toggle the live preview to see updates instantly.
+  </Step>
+  <Step title="Save and Apply" icon="save">
+    Click `Apply Theme` to persist changes across all pages.
+  </Step>
+</Steps>
+
+<CodeGroup tabs="JSON,CSS">
+```json
+{
+  "theme": {
+    "primary": "#3B82F6",
+    "secondary": "#1E40AF",
+    "accent": "#60A5FA"
+  }
+}
+```
+```css
+:root {
+  --primary-color: #3B82F6;
+  --secondary-color: #1E40AF;
+  --accent-color: #60A5FA;
+}
+```
+</CodeGroup>
+
+<Callout kind="tip">
+  Test colors in different lighting modes. Use tools like contrast checkers to ensure readability.
+</Callout>
+
+## Layout Adjustments
+
+Select layouts that suit your content structure. Options include sidebar navigation for deep docs or full-width for overviews.
+
+<Tabs>
+  <Tab title="Sidebar Layout" icon="sidebar">
+    Ideal for multi-page projects.
+    
+    ```json
+    {
+      "layout": "sidebar",
+      "sidebarWidth": "280px",
+      "collapsible": true
+    }
+    ```
+  </Tab>
+  <Tab title="Full Width" icon="maximize">
+    Maximizes content space.
+    
+    ```json
+    {
+      "layout": "full-width",
+      "maxWidth": "1200px",
+      "centered": true
+    }
+    ```
+  </Tab>
+  <Tab title="Grid View" icon="grid">
+    For feature-heavy landing pages.
+    
+    ```json
+    {
+      "layout": "grid",
+      "columns": 3,
+      "gap": "24px"
+    }
+    ```
+  </Tab>
+</Tabs>
+
+## Advanced Options
+
+<ExpandableGroup>
+  <Expandable title="Custom Fonts" default-open="false">
+    Integrate Google Fonts or upload custom ones.
+    
+    ```html
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    ```
+    
+    Update your config:
+    
+    ```json
+    {
+      "fonts": {
+        "body": "Inter, sans-serif",
+        "headings": "Inter, sans-serif"
+      }
+    }
+    ```
+  </Expandable>
+  <Expandable title="Dark Mode Toggle">
+    Enable automatic or manual dark mode.
+    
+    Set `darkMode: "auto"` in your theme JSON for system preference detection.
+  </Expandable>
+</ExpandableGroup>
+
+## Export and Import Options
+
+Backup your customizations or migrate to a new space.
+
+<Callout kind="info">
+  Exports include themes, layouts, and component preferences but exclude content.
+</Callout>
+
+1. Go to `Customization > Export`.
+2. Download the `.json` file.
+3. To import, select `Import` and upload the file.
+
+This process takes under a minute and ensures consistency across environments. Your brand color `#3B82F6` and other settings transfer seamlessly.

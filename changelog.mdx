@@ -1,0 +1,110 @@
+---
+title: Changelog
+description: Track the latest updates and improvements to the Kiran Maadamshetti Documentation platform.
+---
+
+## Recent Updates
+
+Stay informed about new features, improvements, and fixes in the Kiran Maadamshetti Documentation platform. You access the changelog directly from your dashboard sidebar. Review changes by version to understand impacts on your documentation workflows.
+
+<Columns cols={3}>
+  <Card title="v1.2.0" icon="zap" href="#v120">
+    Enhanced exports and performance boosts for larger docsites.
+  </Card>
+  <Card title="v1.1.0" icon="users" href="#v110">
+    Collaboration tools and brand customization options.
+  </Card>
+  <Card title="v1.0.0" icon="rocket" href="#v100">
+    Initial release with core organization features.
+  </Card>
+</Columns>
+
+<Callout kind="info">
+  Breaking changes appear under dedicated sections in each update. Test in staging before upgrading production docsites.
+</Callout>
+
+<Update label="2024-10-15" description="v1.2.0" tags={["feature", "improvement"]}>
+
+## New Features
+
+- Added PDF and HTML export options for full docsites.
+- Introduced search indexing for faster navigation across 100+ pages.
+
+## Improvements
+
+- Optimized rendering speed by 40% for sites with heavy MDX content.
+- Enhanced sidebar navigation with collapsible sections.
+
+## Bug Fixes
+
+- Fixed sync issues with external Git repositories.
+- Resolved mobile responsiveness for embedded code blocks.
+
+</Update>
+
+<Update label="2024-09-20" description="v1.1.0" tags={["feature", "bugfix"]}>
+
+## New Features
+
+- Real-time collaboration: Multiple users edit docs simultaneously.
+- Brand customization: Set custom colors like `#3B82F6` and logos.
+
+## Improvements
+
+- Upgraded MDX parsing for better component support.
+
+## Bug Fixes
+
+- Corrected frontmatter validation errors.
+- Patched preview pane refresh loops.
+
+</Update>
+
+<Update label="2024-08-10" description="v1.0.0" tags={["feature"]}>
+
+## Initial Release
+
+- Core documentation organization: Folders, tags, and search.
+- MDX editor with live preview and syntax highlighting.
+- Integration with GitHub for version control.
+
+</Update>
+
+## Stay Updated
+
+Follow these steps to ensure you never miss an update.
+
+<Steps>
+  <Step title="Enable Notifications" icon="bell">
+    Go to your account settings and toggle changelog notifications.
+  </Step>
+  <Step title="Subscribe to RSS" icon="rss">
+    Add `/changelog.xml` to your RSS reader for automated feeds.
+  </Step>
+  <Step title="Check Dashboard" icon="dashboard">
+    View the latest version badge on your project dashboard.
+  </Step>
+</Steps>
+
+## Version Summary
+
+| Version | Date       | Key Changes                  | Tags             |
+|---------|------------|------------------------------|------------------|
+| v1.2.0  | 2024-10-15 | Exports, performance        | feature, improvement |
+| v1.1.0  | 2024-09-20 | Collaboration, branding     | feature, bugfix  |
+| v1.0.0  | 2024-08-10 | Core features               | feature          |
+
+<Expandable title="View All Historical Changes" default-open="false">
+
+For older versions, check the full archive in your admin panel. Each entry includes migration guides if needed.
+
+</Expandable>
+
+<Tabs>
+  <Tab title="Upgrading" icon="upload">
+    Run `npx kiran-docs upgrade` in your project root.
+  </Tab>
+  <Tab title="Contributing" icon="github">
+    Submit pull requests to the changelog via GitHub.
+  </Tab>
+</Tabs>

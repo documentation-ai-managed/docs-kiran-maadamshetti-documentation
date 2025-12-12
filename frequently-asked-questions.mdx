@@ -1,0 +1,111 @@
+---
+title: Frequently Asked Questions
+description: Find answers to common queries about using Kiran Maadamshetti's documentation platform.
+---
+
+## Account and Access Issues
+
+Resolve common login and permission problems quickly. Use these steps to regain access.
+
+<Callout kind="tip">
+  Enable two-factor authentication (2FA) to secure your account.
+</Callout>
+
+<Steps>
+  <Step title="Reset Password" icon="key">
+    Visit the login page and click `Forgot Password?`.
+
+    Enter your email address.
+
+    Check your inbox for the reset link and follow the instructions.
+  </Step>
+  <Step title="Contact Support" icon="mail">
+    Submit a ticket via the help center.
+
+    Include your account email and a screenshot of the error.
+  </Step>
+</Steps>
+
+## Content Management Tips
+
+Organize and edit your documentation efficiently. Follow best practices for MDX files.
+
+<Tabs>
+  <Tab title="Editing Files" icon="edit-3">
+    Create or modify `.mdx` files in your repository.
+
+    <Expandable title="Add Frontmatter" default-open="true">
+      Start every page with YAML frontmatter:
+
+````mdx
+```yaml
+---
+title: Your Page Title
+description: Brief summary.
+---
+```
+````
+
+      Save and commit changes to publish.
+    </Expandable>
+  </Tab>
+  <Tab title="Version Control" icon="git-branch">
+    Use Git for collaboration.
+
+    <CodeGroup tabs="Git CLI,GitHub UI">
+````bash
+git add docs/*.mdx
+git commit -m "Update FAQ page"
+git push origin main
+````
+
+````bash
+# In GitHub UI
+1. Edit file directly
+2. Commit changes with message
+3. Preview before saving
+````
+    </CodeGroup>
+  </Tab>
+</Tabs>
+
+## Quick Support Options
+
+<Columns cols={3}>
+  <Card title="Help Center" icon="help-circle" href="/docs/help-center">
+    Search self-service articles.
+  </Card>
+  <Card title="Community Forum" icon="users" href="https://forum.example.com" target="_blank">
+    Ask questions to other users.
+  </Card>
+  <Card title="Email Support" icon="mail" href="mailto:support@example.com">
+    Direct assistance for premium users.
+  </Card>
+</Columns>
+
+## Platform Limitations and Support
+
+Review key limits and how to get help.
+
+| Feature | Free Plan | Pro Plan | Notes |
+|---------|-----------|----------|-------|
+| Pages | `<50` | Unlimited | Upgrade for more |
+| Custom Domain | No | Yes | Contact support |
+| API Rate Limit | `100/hour` | `10,000/hour` | Reset every hour |
+| Storage | `1GB` | `100GB` | Images and assets |
+
+<ExpandableGroup>
+  <Expandable title="What if I hit the page limit?">
+    Archive old pages or upgrade to Pro. Delete unused content to free space.
+  </Expandable>
+  <Expandable title="How to request features?">
+    Post in the community forum or submit a feature request form.
+  </Expandable>
+  <Expandable title="Support response time">
+    Free users: 48 hours. Pro users: `<4` hours during business days.
+  </Expandable>
+</ExpandableGroup>
+
+<Callout kind="alert">
+  For security issues, email `security@kiranmaadamshetti.com` immediately. Do not post publicly.
+</Callout>
